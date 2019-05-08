@@ -1,4 +1,4 @@
-jest.mock('./App.js')
+jest.mock('./App')
 jest.mock('react-dom', () => {
   return {
     render: jest.fn()
