@@ -1,6 +1,13 @@
 jest.mock('./App.js')
-jest.mock('react-dom')
+jest.mock('react-dom', () => {
+  return {
+    render: jest.fn()
+  }
+})
 
-require('./index')
+const ReactDOM = require('react-dom')
 
-test('index should run well', () => {})
+test('index should run well', () => {
+  require('./index')
+  expect(ReactDOM.render).toHaveBeenCalled()
+})

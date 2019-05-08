@@ -13,7 +13,7 @@ describe('math - sum', () => {
 
   it('can sum 1 number', () => {
     const res = sum(5)
-    expect(res).toBe()
+    expect(res).toBe(5)
   })
 
   it('can handle minus', () => {
